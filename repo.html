@@ -1,0 +1,21 @@
+<div>
+	<h2>Repository Name : {{repo.name}}</h2>
+
+	<br/>
+
+	<div>Open issues: {{repo.open_issues_count}}</div>
+
+	<div>
+		<ul>
+			<li ng-repeat="user in repo.collaborators">
+				<img src="https://avatars.githubusercontent.com/u/{{user.id}}?v=3" alt="{{user.login}}" style="width:100px; height=100px;">
+				{{user.login}}	
+			<li/>
+
+		</ul>
+		
+	</div>
+</div>
+
+<a href="#/main">Back to search</a>
+<a href="#/user/{{repo.owner.login}}">Back to {{repo.owner.login}}</a>
